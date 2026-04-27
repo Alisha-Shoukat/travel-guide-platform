@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destination Details - TravelHub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../cssFile/globalStyles.css">
+</head>
+<body class="bg-gradient-to-b from-slate-50 to-blue-50">
+    <!-- Navbar -->
+    <nav class="navbar-main navbar-responsive">
+        <div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto w-full">
+            <a href="../index.html" class="text-3xl font-bold bg-gradient-to-r from-blue-600 to-teal-500 bg-clip-text text-transparent">TravelHub</a>
+            
+            <button class="menu-toggle md:hidden" id="menuToggle">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+
+            <ul class="nav-menu hidden md:flex md:gap-8 md:items-center absolute md:relative top-16 md:top-0 left-0 md:left-auto w-full md:w-auto bg-white md:bg-transparent px-6 md:px-0 py-4 md:py-0 flex-col md:flex-row gap-4 md:gap-8" id="navMenu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="./services.html" class="nav-link">Destinations</a></li>
+                <li><a href="./dashboard.html" class="nav-link">My Trips</a></li>
+                <li><a href="./contact.html" class="nav-link">Contact</a></li>
+                <li><a href="./login.html" class="btn-primary px-6 py-2 rounded-lg text-white">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Destination Hero -->
+    <section class="py-12 px-6" style="background: linear-gradient(135deg, rgba(3, 105, 161, 0.1), rgba(20, 184, 166, 0.1));">
+        <div class="max-w-4xl mx-auto">
+            <a href="./services.html" class="text-blue-600 hover:text-blue-700 font-semibold mb-4 inline-block">← Back to Destinations</a>
+            <h1 class="text-5xl md:text-6xl font-bold text-slate-900 mb-4">Paris, France</h1>
+            <div class="flex items-center gap-4 mb-6">
+                <span class="text-3xl">⭐ 4.8</span>
+                <span class="text-slate-600">(2,450 reviews)</span>
+                <button onclick="addToFavorites('paris', 'Paris, France')" class="btn-secondary px-4 py-2 rounded-lg text-sm">❤️ Add to Favorites</button>
+            </div>
+            <img src="../sources/destination-1.jpg" alt="Paris" class="w-full rounded-2xl shadow-xl h-96 object-cover">
+        </div>
+    </section>
+
+    <!-- Destination Content -->
+    <section class="py-16 px-6">
+        <div class="max-w-4xl mx-auto">
+            <!-- Overview -->
+            <div class="bg-white p-8 rounded-lg shadow-md mb-8 border border-gray-200">
+                <h2 class="text-3xl font-bold text-slate-900 mb-6">Overview</h2>
+                <p class="text-slate-700 text-lg leading-relaxed mb-6">
+                    Paris, the capital of France, is one of the most beautiful and romantic cities in the world. Known as the "City of Light," Paris has been a major center of art, fashion, gastronomy, and culture for centuries. With its iconic monuments, world-class museums, charming cafés, and exquisite cuisine, Paris offers an unforgettable travel experience.
+                </p>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="text-center p-4 bg-blue-50 rounded-lg">
+                        <p class="text-2xl font-bold text-blue-600">2.16M</p>
+                        <p class="text-sm text-slate-600">Population</p>
+                    </div>
+                    <div class="text-center p-4 bg-teal-50 rounded-lg">
+                        <p class="text-2xl font-bold text-teal-600">EUR</p>
+                        <p class="text-sm text-slate-600">Currency</p>
+                    </div>
+                    <div class="text-center p-4 bg-blue-50 rounded-lg">
+                        <p class="text-2xl font-bold text-blue-600">UTC+1</p>
+                        <p class="text-sm text-slate-600">Timezone</p>
+                    </div>
+                    <div class="text-center p-4 bg-teal-50 rounded-lg">
+                        <p class="text-2xl font-bold text-teal-600">French</p>
+                        <p class="text-sm text-slate-600">Language</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Best Time to Visit -->
+            <div class="bg-white p-8 rounded-lg shadow-md mb-8 border border-gray-200">
+                <h2 class="text-3xl font-bold text-slate-900 mb-6">Best Time to Visit</h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Spring (April-May)</h3>
+                        <p class="text-slate-600">Mild weather, blooming flowers, and perfect temperatures. Great for sightseeing.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Fall (September-October)</h3>
+                        <p class="text-slate-600">Pleasant weather, fewer crowds, and beautiful autumn colors.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Must-See Attractions -->
+            <div class="bg-white p-8 rounded-lg shadow-md mb-8 border border-gray-200">
+                <h2 class="text-3xl font-bold text-slate-900 mb-6">Must-See Attractions</h2>
+                <div class="space-y-4">
+                    <div class="flex gap-4 p-4 bg-slate-50 rounded-lg">
+                        <span class="text-4xl">🗼</span>
+                        <div>
+                            <h3 class="font-bold text-lg text-slate-900">Eiffel Tower</h3>
+                            <p class="text-slate-600">The iconic iron lattice tower and symbol of Paris. Stunning views of the city from the top.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 p-4 bg-slate-50 rounded-lg">
+                        <span class="text-4xl">🎨</span>
+                        <div>
+                            <h3 class="font-bold text-lg text-slate-900">Louvre Museum</h3>
+                            <p class="text-slate-600">World's largest art museum with masterpieces including the Mona Lisa.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 p-4 bg-slate-50 rounded-lg">
+                        <span class="text-4xl">⛪</span>
+                        <div>
+                            <h3 class="font-bold text-lg text-slate-900">Notre-Dame Cathedral</h3>
+                            <p class="text-slate-600">Magnificent Gothic architecture and historic cathedral on Île de la Cité.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Budget Information -->
+            <div class="bg-white p-8 rounded-lg shadow-md mb-8 border border-gray-200">
+                <h2 class="text-3xl font-bold text-slate-900 mb-6">Budget Information</h2>
+                <div class="overflow-x-auto">
+                    <table class="table-container" style="min-width: 600px; max-width: 100%;">
+                        <thead>
+                            <tr>
+                                <th>Category</th>
+                                <th>Budget (per day)</th>
+                                <th>Notes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Accommodation</td>
+                                <td>$80-150</td>
+                                <td>Hotels, hostels, or Airbnb</td>
+                            </tr>
+                            <tr>
+                                <td>Food & Dining</td>
+                                <td>$30-60</td>
+                                <td>Restaurants and cafés</td>
+                            </tr>
+                            <tr>
+                                <td>Attractions</td>
+                                <td>$15-25</td>
+                                <td>Museums and monuments</td>
+                            </tr>
+                            <tr>
+                                <td>Transportation</td>
+                                <td>$10-15</td>
+                                <td>Metro and local transport</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Reviews Section -->
+            <div class="bg-white p-8 rounded-lg shadow-md border border-gray-200">
+                <h2 class="text-3xl font-bold text-slate-900 mb-6">Traveler Reviews</h2>
+                <div class="space-y-4">
+                    <div class="p-4 bg-slate-50 rounded-lg">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="font-bold text-slate-900">Sarah M.</h4>
+                            <span class="text-yellow-400">⭐⭐⭐⭐⭐</span>
+                        </div>
+                        <p class="text-slate-600">"Paris exceeded all my expectations! The people, the food, the architecture - everything is magnificent. I can't wait to go back!"</p>
+                    </div>
+                    <div class="p-4 bg-slate-50 rounded-lg">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="font-bold text-slate-900">James T.</h4>
+                            <span class="text-yellow-400">⭐⭐⭐⭐</span>
+                        </div>
+                        <p class="text-slate-600">"Amazing city with so much history and culture. Very walkable and easy to navigate. Highly recommended for a romantic getaway!"</p>
+                    </div>
+                </div>
+
+                <div class="mt-6 p-6 bg-blue-50 rounded-lg border border-blue-200">
+                    <h3 class="font-bold text-slate-900 mb-4">Share Your Experience</h3>
+                    <textarea placeholder="Write your review..." class="w-full p-4 border border-gray-300 rounded-lg mb-4" rows="4"></textarea>
+                    <button class="btn-primary px-6 py-2 rounded-lg text-white">Submit Review</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-12 px-6 bg-gradient-to-r from-blue-600 to-teal-500">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-bold text-white mb-4">Ready to Explore Paris?</h2>
+            <p class="text-blue-100 mb-6">Start planning your perfect Parisian adventure today</p>
+            <a href="./dashboard.html" class="btn-light px-8 py-3 rounded-lg text-lg font-semibold">Plan Your Trip</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-main">
+        <div class="footer-container">
+            <div>
+                <h3 class="text-lg font-bold text-white mb-4">TravelHub</h3>
+                <p class="text-gray-400">Your trusted companion for travel planning and exploration.</p>
+            </div>
+            <div>
+                <h4 class="font-bold text-white mb-4">Quick Links</h4>
+                <ul class="space-y-2">
+                    <li><a href="../index.html" class="footer-link">Home</a></li>
+                    <li><a href="./services.html" class="footer-link">Destinations</a></li>
+                    <li><a href="#" class="footer-link">Blog</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-white mb-4">Support</h4>
+                <ul class="space-y-2">
+                    <li><a href="./contact.html" class="footer-link">Contact</a></li>
+                    <li><a href="#" class="footer-link">FAQ</a></li>
+                    <li><a href="#" class="footer-link">Help Center</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-white mb-4">Legal</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="footer-link">Privacy Policy</a></li>
+                    <li><a href="#" class="footer-link">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="text-center border-t border-gray-700 pt-8 mt-8">
+            <p class="text-gray-400">&copy; 2026 TravelHub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../jsFile/jsFunctions.js"></script>
+</body>
+</html>
