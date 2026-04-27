@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinations - TravelHub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../cssFile/globalStyles.css">
+</head>
+<body class="bg-gradient-to-b from-slate-50 to-blue-50">
+    <!-- Navbar -->
+    <nav class="navbar-main navbar-responsive">
+        <div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto w-full">
+            <a href="../index.html" class="text-3xl font-bold bg-gradient-to-r from-blue-600 to-teal-500 bg-clip-text text-transparent">TravelHub</a>
+            
+            <button class="menu-toggle md:hidden" id="menuToggle">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+
+            <ul class="nav-menu hidden md:flex md:gap-8 md:items-center absolute md:relative top-16 md:top-0 left-0 md:left-auto w-full md:w-auto bg-white md:bg-transparent px-6 md:px-0 py-4 md:py-0 flex-col md:flex-row gap-4 md:gap-8" id="navMenu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="./services.html" class="nav-link">Destinations</a></li>
+                <li><a href="./dashboard.html" class="nav-link">My Trips</a></li>
+                <li><a href="./contact.html" class="nav-link">Contact</a></li>
+                <li><a href="./login.html" class="btn-primary px-6 py-2 rounded-lg text-white">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="py-12 px-6 bg-gradient-to-r from-blue-600 to-teal-500">
+        <div class="max-w-6xl mx-auto">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-2">Explore Destinations</h1>
+            <p class="text-blue-100 text-lg">Discover amazing places around the world</p>
+        </div>
+    </section>
+
+    <!-- Search and Filters -->
+    <section class="py-12 px-6 bg-white border-b border-gray-200">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-4">
+                <div>
+                    <input type="text" placeholder="Search destinations..." class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" id="searchInput">
+                </div>
+                <div>
+                    <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" id="ratingFilter">
+                        <option>All Ratings</option>
+                        <option>⭐⭐⭐⭐⭐ (5 stars)</option>
+                        <option>⭐⭐⭐⭐ (4+ stars)</option>
+                        <option>⭐⭐⭐ (3+ stars)</option>
+                    </select>
+                </div>
+                <div>
+                    <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" id="budgetFilter">
+                        <option>Any Budget</option>
+                        <option>Budget ($)</option>
+                        <option>Mid-Range ($$)</option>
+                        <option>Luxury ($$$)</option>
+                    </select>
+                </div>
+                <div>
+                    <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" id="sortFilter">
+                        <option>Sort By</option>
+                        <option>Most Popular</option>
+                        <option>Highest Rated</option>
+                        <option>Lowest Price</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destinations Grid -->
+    <section class="py-12 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="card-container">
+                <!-- Card 1 -->
+                <div class="card" data-destination="paris" data-rating="4.8" data-budget="luxury">
+                    <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=400&h=300&fit=crop" alt="Paris">
+                    <h3 class="font-bold text-xl text-slate-900">Paris, France</h3>
+                    <p class="text-sm">The City of Light with iconic monuments and world-class museums</p>
+                    <div class="flex items-center gap-2 px-3 mb-4">
+                        <span class="text-yellow-400">⭐ 4.8</span>
+                        <span class="text-sm text-slate-600">2,450</span>
+                    </div>
+                    <a href="./destination-details.html" class="hover:text-teal-600 font-semibold">View Details →</a>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card" data-destination="tokyo" data-rating="4.9" data-budget="mid-range">
+                    <img src="https://images.unsplash.com/photo-1540959375944-7049f642e9cd?w=400&h=300&fit=crop" alt="Tokyo">
+                    <h3 class="font-bold text-xl text-slate-900">Tokyo, Japan</h3>
+                    <p class="text-sm">Modern meets tradition with temples, technology, and street food</p>
+                    <div class="flex items-center gap-2 px-3 mb-4">
+                        <span class="text-yellow-400">⭐ 4.9</span>
+                        <span class="text-sm text-slate-600">3,120</span>
+                    </div>
+                    <a href="./destination-details.html" class="hover:text-teal-600 font-semibold">View Details →</a>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card" data-destination="new-york" data-rating="4.7" data-budget="luxury">
+                    <img src="https://images.unsplash.com/photo-1518895949257-7621c3c786d7?w=400&h=300&fit=crop" alt="New York">
+                    <h3 class="font-bold text-xl text-slate-900">New York, USA</h3>
+                    <p class="text-sm">The city that never sleeps with Broadway and world-class museums</p>
+                    <div class="flex items-center gap-2 px-3 mb-4">
+                        <span class="text-yellow-400">⭐ 4.7</span>
+                        <span class="text-sm text-slate-600">2,890</span>
+                    </div>
+                    <a href="./destination-details.html" class="hover:text-teal-600 font-semibold">View Details →</a>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="card" data-destination="barcelona" data-rating="4.6" data-budget="mid-range">
+                    <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=400&h=300&fit=crop" alt="Barcelona">
+                    <h3 class="font-bold text-xl text-slate-900">Barcelona, Spain</h3>
+                    <p class="text-sm">Gaudí's masterpieces, beaches, and vibrant Mediterranean culture</p>
+                    <div class="flex items-center gap-2 px-3 mb-4">
+                        <span class="text-yellow-400">⭐ 4.6</span>
+                        <span class="text-sm text-slate-600">2,340</span>
+                    </div>
+                    <a href="./destination-details.html" class="hover:text-teal-600 font-semibold">View Details →</a>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="card" data-destination="dubai" data-rating="4.5" data-budget="luxury">
+                    <img src="https://images.unsplash.com/photo-1532274040911-5a369e4c4bb5?w=400&h=300&fit=crop" alt="Dubai">
+                    <h3 class="font-bold text-xl text-slate-900">Dubai, UAE</h3>
+                    <p class="text-sm">Luxury shopping, Burj Khalifa, and Arabian desert adventures</p>
+                    <div class="flex items-center gap-2 px-3 mb-4">
+                        <span class="text-yellow-400">⭐ 4.5</span>
+                        <span class="text-sm text-slate-600">1,876</span>
+                    </div>
+                    <a href="./destination-details.html" class="hover:text-teal-600 font-semibold">View Details →</a>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="card" data-destination="bali" data-rating="4.8" data-budget="budget">
+                    <img src="https://images.unsplash.com/photo-1539571696357-5a69c006ae7f?w=400&h=300&fit=crop" alt="Bali">
+                    <h3 class="font-bold text-xl text-slate-900">Bali, Indonesia</h3>
+                    <p class="text-sm">Tropical paradise with temples, rice terraces, and perfect beaches</p>
+                    <div class="flex items-center gap-2 px-3 mb-4">
+                        <span class="text-yellow-400">⭐ 4.8</span>
+                        <span class="text-sm text-slate-600">2,765</span>
+                    </div>
+                    <a href="./destination-details.html" class="hover:text-teal-600 font-semibold">View Details →</a>
+                </div>
+
+                <!-- Card 7 -->
+                <div class="card" data-destination="london" data-rating="4.7" data-budget="luxury">
+                    <img src="https://images.unsplash.com/photo-1505228395891-9a51e7e86e81?w=400&h=300&fit=crop" alt="London">
+                    <h3 class="font-bold text-xl text-slate-900">London, UK</h3>
+                    <p class="text-sm">Historic landmarks, museums, theater, and vibrant culture</p>
+                    <div class="flex items-center gap-2 px-3 mb-4">
+                        <span class="text-yellow-400">⭐ 4.7</span>
+                        <span class="text-sm text-slate-600">2,540</span>
+                    </div>
+                    <a href="./destination-details.html" class="hover:text-teal-600 font-semibold">View Details →</a>
+                </div>
+
+                <!-- Card 8 -->
+                <div class="card" data-destination="bangkok" data-rating="4.6" data-budget="budget">
+                    <img src="https://images.unsplash.com/photo-1552520206-7151a976a4f0?w=400&h=300&fit=crop" alt="Bangkok">
+                    <h3 class="font-bold text-xl text-slate-900">Bangkok, Thailand</h3>
+                    <p class="text-sm">Ancient temples, street food, and bustling night markets</p>
+                    <div class="flex items-center gap-2 px-3 mb-4">
+                        <span class="text-yellow-400">⭐ 4.6</span>
+                        <span class="text-sm text-slate-600">2,120</span>
+                    </div>
+                    <a href="./destination-details.html" class="hover:text-teal-600 font-semibold">View Details →</a>
+                </div>
+
+                <!-- Card 9 -->
+                <div class="card" data-destination="rome" data-rating="4.8" data-budget="mid-range">
+                    <img src="https://images.unsplash.com/photo-1552832230-b0ae8ef6b56d?w=400&h=300&fit=crop" alt="Rome">
+                    <h3 class="font-bold text-xl text-slate-900">Rome, Italy</h3>
+                    <p class="text-sm">The Eternal City with ancient history, art, and romance</p>
+                    <div class="flex items-center gap-2 px-3 mb-4">
+                        <span class="text-yellow-400">⭐ 4.8</span>
+                        <span class="text-sm text-slate-600">3,020</span>
+                    </div>
+                    <a href="./destination-details.html" class="hover:text-teal-600 font-semibold">View Details →</a>
+                </div>
+
+                <!-- Card 10 -->
+                <div class="card" data-destination="singapore" data-rating="4.7" data-budget="luxury">
+                    <img src="https://images.unsplash.com/photo-1540959375944-7049f642e9cd?w=400&h=300&fit=crop" alt="Singapore">
+                    <h3 class="font-bold text-xl text-slate-900">Singapore</h3>
+                    <p class="text-sm">Modern city-state with futuristic architecture and food scene</p>
+                    <div class="flex items-center gap-2 px-3 mb-4">
+                        <span class="text-yellow-400">⭐ 4.7</span>
+                        <span class="text-sm text-slate-600">2,280</span>
+                    </div>
+                    <a href="./destination-details.html" class="hover:text-teal-600 font-semibold">View Details →</a>
+                </div>
+
+                <!-- Card 11 -->
+                <div class="card" data-destination="amsterdam" data-rating="4.6" data-budget="mid-range">
+                    <img src="https://images.unsplash.com/photo-1488747807830-63789f68bb65?w=400&h=300&fit=crop" alt="Amsterdam">
+                    <h3 class="font-bold text-xl text-slate-900">Amsterdam, Netherlands</h3>
+                    <p class="text-sm">Canals, museums, bicycles, and charming neighborhoods</p>
+                    <div class="flex items-center gap-2 px-3 mb-4">
+                        <span class="text-yellow-400">⭐ 4.6</span>
+                        <span class="text-sm text-slate-600">1,990</span>
+                    </div>
+                    <a href="./destination-details.html" class="hover:text-teal-600 font-semibold">View Details →</a>
+                </div>
+
+                <!-- Card 12 -->
+                <div class="card" data-destination="sydney" data-rating="4.8" data-budget="mid-range">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop" alt="Sydney">
+                    <h3 class="font-bold text-xl text-slate-900">Sydney, Australia</h3>
+                    <p class="text-sm">Opera House, beautiful beaches, and vibrant culture</p>
+                    <div class="flex items-center gap-2 px-3 mb-4">
+                        <span class="text-yellow-400">⭐ 4.8</span>
+                        <span class="text-sm text-slate-600">2,645</span>
+                    </div>
+                    <a href="./destination-details.html" class="hover:text-teal-600 font-semibold">View Details →</a>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="mt-12 flex justify-center gap-2">
+                <button class="px-4 py-2 border border-gray-300 rounded-lg text-slate-900 hover:bg-slate-100">Previous</button>
+                <button class="px-4 py-2 bg-blue-600 text-white rounded-lg">1</button>
+                <button class="px-4 py-2 border border-gray-300 rounded-lg text-slate-900 hover:bg-slate-100">2</button>
+                <button class="px-4 py-2 border border-gray-300 rounded-lg text-slate-900 hover:bg-slate-100">3</button>
+                <button class="px-4 py-2 border border-gray-300 rounded-lg text-slate-900 hover:bg-slate-100">Next</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-main">
+        <div class="footer-container">
+            <div>
+                <h3 class="text-lg font-bold text-white mb-4">TravelHub</h3>
+                <p class="text-gray-400">Your trusted companion for travel planning and exploration.</p>
+            </div>
+            <div>
+                <h4 class="font-bold text-white mb-4">Quick Links</h4>
+                <ul class="space-y-2">
+                    <li><a href="../index.html" class="footer-link">Home</a></li>
+                    <li><a href="./services.html" class="footer-link">Destinations</a></li>
+                    <li><a href="./blog.html" class="footer-link">Blog</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-white mb-4">Support</h4>
+                <ul class="space-y-2">
+                    <li><a href="./contact.html" class="footer-link">Contact</a></li>
+                    <li><a href="#" class="footer-link">FAQ</a></li>
+                    <li><a href="#" class="footer-link">Help Center</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-white mb-4">Legal</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="footer-link">Privacy Policy</a></li>
+                    <li><a href="#" class="footer-link">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="text-center border-t border-gray-700 pt-8 mt-8">
+            <p class="text-gray-400">&copy; 2026 TravelHub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../jsFile/jsFunctions.js"></script>
+    <script>
+        const searchInput = document.getElementById('searchInput');
+        const ratingFilter = document.getElementById('ratingFilter');
+        const budgetFilter = document.getElementById('budgetFilter');
+        const cards = document.querySelectorAll('.card');
+
+        function filterDestinations() {
+            const searchTerm = searchInput.value.toLowerCase();
+            const selectedRating = ratingFilter.value;
+            const selectedBudget = budgetFilter.value;
+
+            cards.forEach(card => {
+                const destination = card.getAttribute('data-destination').toLowerCase();
+                const rating = card.getAttribute('data-rating');
+                const budget = card.getAttribute('data-budget');
+
+                let show = true;
+
+                // Search filter
+                if (!destination.includes(searchTerm)) show = false;
+
+                // Rating filter
+                if (selectedRating !== 'All Ratings') {
+                    const minRating = parseFloat(selectedRating.split('⭐')[1] || '0');
+                    if (parseFloat(rating) < minRating) show = false;
+                }
+
+                // Budget filter
+                if (selectedBudget !== 'Any Budget' && selectedBudget !== '') {
+                    const budgetType = selectedBudget.split(' ')[0].toLowerCase();
+                    if (budget !== budgetType) show = false;
+                }
+
+                card.style.display = show ? 'flex' : 'none';
+            });
+        }
+
+        searchInput.addEventListener('keyup', filterDestinations);
+        ratingFilter.addEventListener('change', filterDestinations);
+        budgetFilter.addEventListener('change', filterDestinations);
+    </script>
+</body>
+</html>
