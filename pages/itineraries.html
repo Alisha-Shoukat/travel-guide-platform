@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Itineraries - WanderHub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../cssFile/globalStyles.css">
+</head>
+<body class="font-poppins bg-gradient-to-br from-blue-50 via-blue-100 to-teal-50">
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="../index.html" class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">
+                    🌍 WanderHub
+                </a>
+                <div class="hidden md:flex gap-4">
+                    <a href="destinations.html" class="text-gray-700 hover:text-blue-600 transition">Destinations</a>
+                    <a href="tips.html" class="text-gray-700 hover:text-blue-600 transition">Tips</a>
+                    <a href="login.html" class="px-4 py-2 bg-gradient-to-r from-blue-600 to-teal-600 text-white rounded-lg hover:shadow-lg transition">Sign In</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- Header -->
+        <div class="mb-12">
+            <h1 class="text-5xl font-bold bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent mb-4">Curated Itineraries</h1>
+            <p class="text-xl text-gray-600">Expertly planned trips for unforgettable experiences</p>
+        </div>
+
+        <!-- Filter -->
+        <div class="bg-white rounded-2xl shadow-lg p-6 mb-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <input type="text" id="searchItin" placeholder="Search itineraries..." class="px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-blue-600 focus:outline-none transition">
+                <select id="filterDuration" class="px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-blue-600 focus:outline-none transition">
+                    <option value="">All Durations</option>
+                    <option value="3-5">3-5 Days</option>
+                    <option value="6-10">6-10 Days</option>
+                    <option value="10+">10+ Days</option>
+                </select>
+                <select id="filterBudget" class="px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-blue-600 focus:outline-none transition">
+                    <option value="">All Budgets</option>
+                    <option value="budget">Budget</option>
+                    <option value="mid">Mid-range</option>
+                    <option value="luxury">Luxury</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Itineraries Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <!-- Itinerary 1 -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-2">
+                <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=600&h=300&fit=crop" alt="European Tour" class="w-full h-56 object-cover">
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-3">European Grand Tour</h3>
+                    <div class="flex items-center justify-between mb-4 text-sm text-gray-600">
+                        <span>⏱️ 14 Days</span>
+                        <span>💰 $3,500</span>
+                        <span>★★★★★ (4.9)</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">Experience the best of Europe: Paris, Amsterdam, Berlin, and Prague</p>
+                    <div class="mb-6">
+                        <h4 class="font-bold text-gray-800 mb-2">Highlights:</h4>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>✓ Eiffel Tower & Louvre</li>
+                            <li>✓ Canal tours in Amsterdam</li>
+                            <li>✓ Historic Berlin Wall</li>
+                            <li>✓ Prague Castle</li>
+                        </ul>
+                    </div>
+                    <button class="w-full py-2 bg-gradient-to-r from-blue-600 to-teal-600 text-white font-bold rounded-lg hover:shadow-lg transition">View Full Itinerary</button>
+                </div>
+            </div>
+
+            <!-- Itinerary 2 -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-2">
+                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=300&fit=crop" alt="Asian Adventure" class="w-full h-56 object-cover">
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-3">Asian Adventure Quest</h3>
+                    <div class="flex items-center justify-between mb-4 text-sm text-gray-600">
+                        <span>⏱️ 21 Days</span>
+                        <span>💰 $2,800</span>
+                        <span>★★★★★ (4.8)</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">Southeast Asia adventure through Thailand, Cambodia, and Vietnam</p>
+                    <div class="mb-6">
+                        <h4 class="font-bold text-gray-800 mb-2">Highlights:</h4>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>✓ Bangkok street food tour</li>
+                            <li>✓ Angkor Wat temples</li>
+                            <li>✓ Mekong Delta cruise</li>
+                            <li>✓ Hanoi Old Quarter</li>
+                        </ul>
+                    </div>
+                    <button class="w-full py-2 bg-gradient-to-r from-blue-600 to-teal-600 text-white font-bold rounded-lg hover:shadow-lg transition">View Full Itinerary</button>
+                </div>
+            </div>
+
+            <!-- Itinerary 3 -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-2">
+                <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=600&h=300&fit=crop" alt="Caribbean Escape" class="w-full h-56 object-cover">
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-3">Caribbean Island Escape</h3>
+                    <div class="flex items-center justify-between mb-4 text-sm text-gray-600">
+                        <span>⏱️ 7 Days</span>
+                        <span>💰 $2,200</span>
+                        <span>★★★★★ (4.7)</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">Luxury beach vacation across pristine Caribbean islands</p>
+                    <div class="mb-6">
+                        <h4 class="font-bold text-gray-800 mb-2">Highlights:</h4>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>✓ Turks and Caicos beaches</li>
+                            <li>✓ Virgin Islands sailing</li>
+                            <li>✓ Coral reef snorkeling</li>
+                            <li>✓ Island nightlife</li>
+                        </ul>
+                    </div>
+                    <button class="w-full py-2 bg-gradient-to-r from-blue-600 to-teal-600 text-white font-bold rounded-lg hover:shadow-lg transition">View Full Itinerary</button>
+                </div>
+            </div>
+
+            <!-- Itinerary 4 -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-2">
+                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=300&fit=crop" alt="Japan Journey" class="w-full h-56 object-cover">
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-3">Japan Heritage Journey</h3>
+                    <div class="flex items-center justify-between mb-4 text-sm text-gray-600">
+                        <span>⏱️ 10 Days</span>
+                        <span>💰 $3,200</span>
+                        <span>★★★★★ (4.9)</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">Explore ancient temples, modern cities, and scenic landscapes</p>
+                    <div class="mb-6">
+                        <h4 class="font-bold text-gray-800 mb-2">Highlights:</h4>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>✓ Tokyo modern culture</li>
+                            <li>✓ Kyoto ancient temples</li>
+                            <li>✓ Mount Fuji views</li>
+                            <li>✓ Traditional tea ceremony</li>
+                        </ul>
+                    </div>
+                    <button class="w-full py-2 bg-gradient-to-r from-blue-600 to-teal-600 text-white font-bold rounded-lg hover:shadow-lg transition">View Full Itinerary</button>
+                </div>
+            </div>
+
+            <!-- Itinerary 5 -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-2">
+                <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=600&h=300&fit=crop" alt="Alpine Adventure" class="w-full h-56 object-cover">
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-3">Alpine Mountain Adventure</h3>
+                    <div class="flex items-center justify-between mb-4 text-sm text-gray-600">
+                        <span>⏱️ 8 Days</span>
+                        <span>💰 $2,600</span>
+                        <span>★★★★☆ (4.6)</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">Hiking and adventure through the Swiss and Austrian Alps</p>
+                    <div class="mb-6">
+                        <h4 class="font-bold text-gray-800 mb-2">Highlights:</h4>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>✓ Interlaken adventure hub</li>
+                            <li>✓ Jungfrau mountain train</li>
+                            <li>✓ Zermatt village charm</li>
+                            <li>✓ Alpine hiking trails</li>
+                        </ul>
+                    </div>
+                    <button class="w-full py-2 bg-gradient-to-r from-blue-600 to-teal-600 text-white font-bold rounded-lg hover:shadow-lg transition">View Full Itinerary</button>
+                </div>
+            </div>
+
+            <!-- Itinerary 6 -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-2">
+                <img src="https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=600&h=300&fit=crop" alt="Africa Safari" class="w-full h-56 object-cover">
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-3">African Safari Experience</h3>
+                    <div class="flex items-center justify-between mb-4 text-sm text-gray-600">
+                        <span>⏱️ 12 Days</span>
+                        <span>💰 $4,500</span>
+                        <span>★★★★★ (4.9)</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">Witness incredible wildlife in Kenya and Tanzania's national parks</p>
+                    <div class="mb-6">
+                        <h4 class="font-bold text-gray-800 mb-2">Highlights:</h4>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>✓ Serengeti game drives</li>
+                            <li>✓ Great Migration</li>
+                            <li>✓ Masai Mara safari</li>
+                            <li>✓ Kilimanjaro views</li>
+                        </ul>
+                    </div>
+                    <button class="w-full py-2 bg-gradient-to-r from-blue-600 to-teal-600 text-white font-bold rounded-lg hover:shadow-lg transition">View Full Itinerary</button>
+                </div>
+            </div>
+
+            <!-- Itinerary 7-12 (Similar structure) -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-2">
+                <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=600&h=300&fit=crop" alt="Australia Adventure" class="w-full h-56 object-cover">
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-3">Australia Outback Explorer</h3>
+                    <div class="flex items-center justify-between mb-4 text-sm text-gray-600">
+                        <span>⏱️ 14 Days</span>
+                        <span>💰 $3,800</span>
+                        <span>★★★★★ (4.8)</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">Sydney beaches, Red Outback, and iconic Australian experiences</p>
+                    <div class="mb-6">
+                        <h4 class="font-bold text-gray-800 mb-2">Highlights:</h4>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>✓ Sydney Opera House</li>
+                            <li>✓ Uluru sunset</li>
+                            <li>✓ Great Barrier Reef</li>
+                            <li>✓ Outback safari</li>
+                        </ul>
+                    </div>
+                    <button class="w-full py-2 bg-gradient-to-r from-blue-600 to-teal-600 text-white font-bold rounded-lg hover:shadow-lg transition">View Full Itinerary</button>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-2">
+                <img src="https://images.unsplash.com/photo-1518136247453-74e7b5265980?w=600&h=300&fit=crop" alt="South America" class="w-full h-56 object-cover">
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-3">South America Wonder Tour</h3>
+                    <div class="flex items-center justify-between mb-4 text-sm text-gray-600">
+                        <span>⏱️ 16 Days</span>
+                        <span>💰 $2,900</span>
+                        <span>★★★★★ (4.7)</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">Machu Picchu, Amazon, and vibrant South American cities</p>
+                    <div class="mb-6">
+                        <h4 class="font-bold text-gray-800 mb-2">Highlights:</h4>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>✓ Machu Picchu trek</li>
+                            <li>✓ Amazon rainforest</li>
+                            <li>✓ Lima food scene</li>
+                            <li>✓ Cusco heritage</li>
+                        </ul>
+                    </div>
+                    <button class="w-full py-2 bg-gradient-to-r from-blue-600 to-teal-600 text-white font-bold rounded-lg hover:shadow-lg transition">View Full Itinerary</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-blue-900 to-teal-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">WanderHub</h3>
+                    <p class="text-blue-100">Plan your perfect trip</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Explore</h4>
+                    <ul class="space-y-2 text-blue-100">
+                        <li><a href="#" class="hover:text-white transition">Destinations</a></li>
+                        <li><a href="#" class="hover:text-white transition">Itineraries</a></li>
+                        <li><a href="#" class="hover:text-white transition">Tips</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Company</h4>
+                    <ul class="space-y-2 text-blue-100">
+                        <li><a href="#" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="#" class="hover:text-white transition">Contact</a></li>
+                        <li><a href="#" class="hover:text-white transition">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Social</h4>
+                    <p class="text-blue-100">📱 Facebook | 📷 Instagram | 🐦 Twitter</p>
+                </div>
+            </div>
+            <div class="border-t border-blue-700 mt-8 pt-8 text-center text-blue-100">
+                <p>&copy; 2024 WanderHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../jsFile/jsFunctions.js"></script>
+</body>
+</html>
