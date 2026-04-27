@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TravelHub – Discover Your Next Adventure</title>
+  <link rel="stylesheet" href="cssFile/globalStyles.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html">🌍 TravelHub</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul id="navMenu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pages/services.html">Destinations</a></li>
+        <li><a href="pages/itineraries.html">Itineraries</a></li>
+        <li><a href="pages/tips.html">Travel Tips</a></li>
+        <li><a href="pages/contact.html">Contact</a></li>
+        <li><a href="pages/login.html" class="btn-primary">Login</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <h1>Discover Your Next Adventure</h1>
+    <p>Explore world-class destinations, curated itineraries, and expert travel tips — all in one place.</p>
+    <div class="hero-search">
+      <input type="text" id="heroSearch" placeholder="Search destinations…" aria-label="Search destinations">
+      <button class="btn-primary" onclick="heroSearchRedirect()">Search</button>
+    </div>
+  </section>
+
+  <!-- ===== FEATURED DESTINATIONS ===== -->
+  <section class="section">
+    <div class="page">
+      <h2>Featured Destinations</h2>
+      <p>Hand-picked cities loved by our community of travellers.</p>
+      <div class="card-container">
+
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600&h=400&fit=crop" alt="Paris, France">
+          <div class="card-body">
+            <h3>Paris, France</h3>
+            <p>The City of Light — iconic monuments, world-class cuisine, and timeless romance.</p>
+            <span>⭐ 4.8 · Luxury</span>
+            <a href="pages/destination-details.html">View Details →</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1540959375944-7049f642e9cd?w=600&h=400&fit=crop" alt="Tokyo, Japan">
+          <div class="card-body">
+            <h3>Tokyo, Japan</h3>
+            <p>Where ancient temples meet neon-lit cityscapes, street food, and cutting-edge technology.</p>
+            <span>⭐ 4.9 · Mid-Range</span>
+            <a href="pages/destination-details.html">View Details →</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1539571696357-5a69c006ae7f?w=600&h=400&fit=crop" alt="Bali, Indonesia">
+          <div class="card-body">
+            <h3>Bali, Indonesia</h3>
+            <p>Tropical paradise of rice terraces, sacred temples, and perfect white-sand beaches.</p>
+            <span>⭐ 4.8 · Budget</span>
+            <a href="pages/destination-details.html">View Details →</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1552832230-b0ae8ef6b56d?w=600&h=400&fit=crop" alt="Rome, Italy">
+          <div class="card-body">
+            <h3>Rome, Italy</h3>
+            <p>The Eternal City overflows with ancient history, baroque fountains, and superb pasta.</p>
+            <span>⭐ 4.8 · Mid-Range</span>
+            <a href="pages/destination-details.html">View Details →</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=600&h=400&fit=crop" alt="Barcelona, Spain">
+          <div class="card-body">
+            <h3>Barcelona, Spain</h3>
+            <p>Gaudí masterpieces, golden beaches, and vibrant Mediterranean culture await.</p>
+            <span>⭐ 4.6 · Mid-Range</span>
+            <a href="pages/destination-details.html">View Details →</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop" alt="Sydney, Australia">
+          <div class="card-body">
+            <h3>Sydney, Australia</h3>
+            <p>Harbour Bridge, Opera House, and stunning beaches make Sydney unforgettable.</p>
+            <span>⭐ 4.8 · Mid-Range</span>
+            <a href="pages/destination-details.html">View Details →</a>
+          </div>
+        </div>
+
+      </div>
+      <div style="text-align:center;margin-top:8px;">
+        <a href="pages/services.html" class="btn-secondary">Browse All Destinations</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY TRAVELHUB ===== -->
+  <section class="section section-alt">
+    <div class="page">
+      <h2>Why Choose TravelHub?</h2>
+      <p>Everything you need to plan an unforgettable trip, in one platform.</p>
+      <div class="card-container">
+
+        <div class="card">
+          <div class="card-body" style="align-items:center;text-align:center;">
+            <span style="font-size:3rem;">🗺️</span>
+            <h3>Expert Itineraries</h3>
+            <p>Carefully crafted day-by-day plans designed by experienced travellers and local guides.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-body" style="align-items:center;text-align:center;">
+            <span style="font-size:3rem;">💡</span>
+            <h3>Insider Tips</h3>
+            <p>Practical advice on packing, budgeting, safety, and making the most of every destination.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-body" style="align-items:center;text-align:center;">
+            <span style="font-size:3rem;">📋</span>
+            <h3>Trip Builder</h3>
+            <p>Build, save, and export your personalised itinerary with our interactive planner tool.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== POPULAR ITINERARIES ===== -->
+  <section class="section">
+    <div class="page">
+      <h2>Popular Itineraries</h2>
+      <p>Expertly planned trips that have wowed thousands of travellers.</p>
+      <div class="card-container">
+
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=600&h=300&fit=crop" alt="European Grand Tour">
+          <div class="card-body">
+            <h3>European Grand Tour</h3>
+            <p>Paris → Amsterdam → Berlin → Prague in 14 breathtaking days.</p>
+            <span>⏱ 14 Days · ⭐ 4.9</span>
+            <a href="pages/itineraries.html">See Itinerary →</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=300&fit=crop" alt="Asian Adventure Quest">
+          <div class="card-body">
+            <h3>Asian Adventure Quest</h3>
+            <p>Bangkok → Siem Reap → Ho Chi Minh City — 21 days of Southeast Asian wonder.</p>
+            <span>⏱ 21 Days · ⭐ 4.8</span>
+            <a href="pages/itineraries.html">See Itinerary →</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=600&h=300&fit=crop" alt="Caribbean Island Escape">
+          <div class="card-body">
+            <h3>Caribbean Escape</h3>
+            <p>Pristine beaches, coral reefs, and island nightlife for a perfect 7-day getaway.</p>
+            <span>⏱ 7 Days · ⭐ 4.7</span>
+            <a href="pages/itineraries.html">See Itinerary →</a>
+          </div>
+        </div>
+
+      </div>
+      <div style="text-align:center;margin-top:8px;">
+        <a href="pages/itineraries.html" class="btn-secondary">View All Itineraries</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta-section">
+    <div class="page">
+      <h2>Start Planning Your Dream Trip</h2>
+      <p>Join thousands of travellers who use TravelHub to explore the world with confidence.</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:20px;">
+        <a href="pages/signup.html" class="btn-light">Create Free Account</a>
+        <a href="pages/itinerary-builder.html" class="btn-secondary">Build an Itinerary</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-container">
+      <div>
+        <h3>🌍 TravelHub</h3>
+        <p>Your trusted companion for travel planning and world exploration.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="pages/services.html">Destinations</a></li>
+          <li><a href="pages/itineraries.html">Itineraries</a></li>
+          <li><a href="pages/tips.html">Travel Tips</a></li>
+          <li><a href="pages/destination-details.html">Destination Details</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Plan</h4>
+        <ul>
+          <li><a href="pages/itinerary-builder.html">Build Itinerary</a></li>
+          <li><a href="pages/dashboard.html">My Dashboard</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Account</h4>
+        <ul>
+          <li><a href="pages/login.html">Login</a></li>
+          <li><a href="pages/signup.html">Sign Up</a></li>
+          <li><a href="pages/contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-copy">© 2026 TravelHub. All rights reserved.</p>
+  </footer>
+
+  <script src="jsFile/jsFunctions.js"></script>
+  <script>
+    function heroSearchRedirect() {
+      const q = document.getElementById('heroSearch').value.trim();
+      if (q) window.location.href = 'pages/services.html?q=' + encodeURIComponent(q);
+      else window.location.href = 'pages/services.html';
+    }
+    document.getElementById('heroSearch').addEventListener('keydown', e => {
+      if (e.key === 'Enter') heroSearchRedirect();
+    });
+  </script>
+</body>
+</html>
